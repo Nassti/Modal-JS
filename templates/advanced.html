@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>LK advanced</title>
+</head>
+<body>
+<div class="wrap wrap__basic">
+  <header class="header__basic">
+    <div class="container container__basic__header">
+      <button class="btn__popup button advanced">Поставить оценку</button>
+      <ul class="nav__basic">
+        <li><a href="loged.html" class="active__link">История</a></li>
+        <li><a href="#">Таблица итогов</a></li>
+      </ul>
+      <h2 class="user__login"><span>User login</span></h2>
+      <div id="advanced" class="popup">
+        <div class="popup__body">
+            <form action="/advanced/" class="popup__content">
+              <span class="popup__close">&times;</span>
+              <div class="popup__title">Выставление оценки</div>
+              <p>
+                <select required="required" name="#">
+                  <option selected disabled>Выберите кому</option>
+                  <option value="Чебурашка">Чебурашка</option>
+                  <option value="Крокодил Гена">Крокодил Гена</option>
+                  <option value="Шапокляк">Шапокляк</option>
+                  <option value="Крыса Лариса">Крыса Лариса</option>
+                </select>
+              </p>
+              <p>
+                <select required="required" name="#">
+                  <option selected disabled>Выберите оценку</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </p>
+              <p>
+                <textarea placeholder="Сообщение" required="required" maxlength="200"></textarea>
+              </p>
+              <button class="btn"><span>Отправить </span></button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container container__basic__main">
+      <section class="card__score">
+        <div class="score">5</div>
+        <div class="info__score">
+          <div class="date__score">Дата получения оценки: <span>15.04.2022</span></div>
+          <div class="from-score">Teacher</div>
+          <div class="description__score">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi delectus deserunt ducimus earum est quia sequi sit tempora ut?</div>
+          <div class="change_score">Рейтинг: <span>+1</span></div>
+          <div class="score__redactor">
+            <button class="btn__redactor"><a href="#">Редактировать</a></button>
+            <form action="#">
+              <button type="submit" class="btn__redactor">Удалить</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="../static/script.js"></script>
+</body>
+</html>

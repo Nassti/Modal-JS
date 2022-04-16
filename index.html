@@ -3,69 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-<!--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/solid.css">-->
-<!--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css">-->
-  <link rel="stylesheet" href="style.css">
+<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">-->
+  <link rel="stylesheet" href="static/style.css">
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <button class="btn btn__popup login"><span>Вход </span></button>
-    <button class="btn btn__popup register"><span>Регистрация </span></button>
-
-    <div id="login" class="popup">
-      <div class="popup__body">
-        <form action="/" class="popup__content">
-          <span class="popup__close">&times;</span>
-          <div class="popup__title">Вход</div>
-          <p>
-            <label for="username" class="uname">Ваш email или логин</label>
-            <input id="username" name="username" required="required" type="text" placeholder="mymail@mail.com"/>
-          </p>
-          <p>
-            <label for="password" class="youpasswd">Ваш пароль </label>
-            <input id="password" name="password" required="required" type="password" placeholder="df!90EO" />
-          </p>
-          <button class="btn"><span>Вход </span></button>
-          <p class="change_link">
-            Вы еще не с нами?
-            <a href="#" class="to_subscribe">Присоединиться</a>
-          </p>
-        </form>
+<div class="wrap wrap__index">
+  <main class="main__index">
+    <div class="container container__index">
+      <h1>Приветствуем вас на сайте <span>8 IT класса</span></h1>
+      <button class="btn btn__popup login"><span>Вход </span></button>
+      <button class="btn btn__popup register"><span>Регистрация </span></button>
+      <div id="login" class="popup">
+        <div class="popup__body">
+          <form action="/login/" class="popup__content">
+            <span class="popup__close">&times;</span>
+            <div class="popup__title">Вход</div>
+            <p>
+              <label for="username">Ваш логин</label>
+              <input id="username" name="username" required="required" type="text" placeholder="mymail@mail.com"/>
+            </p>
+            <p>
+              <label for="password">Ваш пароль </label>
+              <input id="password" name="password" required="required" type="password" placeholder="df!90EO" />
+            </p>
+            <button type="submit" class="btn"><span>Вход </span></button>
+          </form>
+        </div>
+      </div>
+      <div id="register" class="popup">
+        <div class="popup__body">
+          <form action="/reg/" class="popup__content" method="post">
+            <span class="popup__close">&times;</span>
+            <div class="popup__title">Регистрация</div>
+            <p>
+              <label for="usernamesignup">Ваш логин</label>
+              <input id="usernamesignup" name="login" required="required" type="text" placeholder="mysuperusername" />
+            </p>
+            <p>
+              <label for="passwordsignup">Ваш пароль </label>
+              <input id="passwordsignup" name="psw" required="required" type="password" placeholder="f!90EO"/>
+            </p>
+            <p>
+              <label for="passwordsignup_confirm">Ещё раз пароль </label>
+              <input id="passwordsignup_confirm" name="psw_confirm" required="required" type="password" placeholder="f!90EO"/>
+            </p>
+            <p>
+              <label class="check">
+              <input value="teacher" name="teacher" type="checkbox">Учитель</label>
+            </p>
+            <button type="submit" class="btn"><span>Зарегистрироваться </span></button>
+          </form>
+        </div>
       </div>
     </div>
-    <div id="register" class="popup">
-      <div class="popup__body">
-        <form action="/" class="popup__content">
-          <span class="popup__close">&times;</span>
-          <div class="popup__title">Регистрация</div>
-          <p>
-            <label for="usernamesignup" class="uname">Ваш email или логин</label>
-            <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername" />
-          </p>
-          <p>
-            <label for="emailsignup" class="youmail"> Your email</label>
-            <input id="emailsignup" name="emailsignup" required="required" type="text" placeholder="mymail@mail.com"/>
-          </p>
-          <p>
-            <label for="passwordsignup" class="youpasswd">Ваш пароль </label>
-            <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="f!90EO"/>
-          </p>
-          <p>
-            <label for="passwordsignup_confirm" class="youpasswd">Подтвердите пароль </label>
-            <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="f!90EO"/>
-          </p>
-          <button class="btn"><span>Зарегистрироваться </span></button>
-          <p class="change_link">
-            Восстановить пароль?
-            <a href="#" class="to_subscribe">Восстановить </a>
-          </p>
-        </form>
-      </div>
-    </div>
-  </div>
-  <script src="script.js"></script>
+  </main>
+</div>
+<script src="static/script.js"></script>
 </body>
 </html>
